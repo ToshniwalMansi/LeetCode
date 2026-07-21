@@ -1,0 +1,22 @@
+class Solution {
+    public int maximumWealth(int[][] accounts) {
+    int temp = 0;
+        for(int i=0 ; i<accounts.length ; i++){
+            for(int j=0 ; j<accounts[i].length-1 ; j++){
+                accounts[i][j+1] = accounts[i][j] + accounts[i][j+1] ;
+            }
+        }
+
+        for(int i=0 ; i<accounts.length ; i++){
+            for(int j=0 ; j<accounts[i].length ; j++){
+                if(temp <= accounts[i][j]){
+                    temp = accounts[i][j];
+                }
+                
+            }
+        }
+
+    return temp;
+    
+    }
+}
