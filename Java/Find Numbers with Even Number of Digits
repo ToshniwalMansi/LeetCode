@@ -36,3 +36,19 @@ class Solution {
         return ans;
     }
 }
+
+// Another method but takes more memory and the above one beats 99$ and this one beats 33%
+
+class Solution {
+    public int findNumbers(int[] nums) {
+        
+        int ans =0;
+
+        for(int i=0 ; i<nums.length ; i++){
+            if(String.valueOf(nums[i]).length() % 2 == 0){
+                ans ++;
+            }
+        }
+        return ans;
+    }    
+}
